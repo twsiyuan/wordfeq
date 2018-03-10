@@ -1,4 +1,4 @@
-package wordfeq
+package wordfreq
 
 import (
 	"regexp"
@@ -62,7 +62,7 @@ type Term struct {
 func (w *WordFeq) Process(text string) []Term {
 
 	pushTerm := func(term string, count int) {
-		if n, ok := w.terms[term]; !ok {
+		if n, ok := w.terms[term]; ok {
 			w.terms[term] = n + count
 		} else {
 			w.terms[term] = count

@@ -3,30 +3,30 @@
 [Text corpus](https://en.wikipedia.org/wiki/Text_corpus) calculation in Golang. 
 Supports Chinese, English.
 
-This work is a derivative of [wordfeq](https://github.com/timdream/wordfreq/) by [Timothy Guan-tin Chien](http://timc.idv.tw/).
+This work is a derivative of [wordfreq](https://github.com/timdream/wordfreq/) by [Timothy Guan-tin Chien](http://timc.idv.tw/).
 
 ## Install
 
 With a [correctly configured](https://golang.org/doc/install#testing) Go toolchain:
 
 ```sh
-go get -u github.com/twsiyuan/wordfeq
+go get -u github.com/twsiyuan/wordfreq
 ```
 
 ## Simple Example
 
 ```go
 import(
-   "github.com/twsiyuan/wordfeq"
+   "github.com/twsiyuan/wordfreq"
 )
 
 func main(){
-   wfeq, _ := wordfeq.New(wordfeq.Options{})
-   tlist := wfeq.Process("text")  // Term list
+   wfreq, _ := wordfreq.New(wordfreq.Options{})
+   tlist := wfreq.Process("text")  // Term list
 }
 ```
 
-Available options in ```wordfeq.Options```:
+Available options in ```wordfreq.Options```:
 
 - ```Languages```: Array of keywords to specify languages to process. Available keywords are ```chinese```, ```english```. Default to both.
 - ```StopWordSets```: Array of keywords to specify the built-in set of stop words to exclude in the count. Available: ```cjk```, ```english1```, and ```english2```. Default to all.
